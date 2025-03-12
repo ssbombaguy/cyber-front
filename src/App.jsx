@@ -1,15 +1,11 @@
 import { useState } from 'react'
-
+import Navbar from "./components/Nav-bar.jsx";
 import './reset.css'
-
-function App() {
-  const [count, setCount] = useState("app")
-
-  return (
-    <>
-        <h1>{count}</h1>
-    </>
-  )
-}
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+const App = () => {
+    return (
+        <Navbar></Navbar>
+    );
+};
 
 export default App
