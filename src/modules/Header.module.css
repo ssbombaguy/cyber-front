@@ -1,0 +1,39 @@
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  margin-top: 16px;
+}
+.header-wrapper .search-wrapper {
+  background-color: rgb(245, 245, 245);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  min-width: 372px;
+  box-sizing: border-box;
+  gap: 8px;
+  align-items: center;
+}
+.header-wrapper .search-wrapper input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.header-wrapper nav ul {
+  display: flex;
+  gap: 52px;
+}
+.header-wrapper nav ul li .navlink {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: Inter, monospace;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+.header-wrapper nav ul li .active {
+  color: #000000;
+}
+
+/*# sourceMappingURL=Header.module.css.map */
