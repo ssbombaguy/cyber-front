@@ -1,11 +1,13 @@
-import { useState } from 'react'
-import Navbar from "./components/Nav-bar.jsx";
+
 import '../reset.scss'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "../components/Header.jsx";
+import {Header} from "../components/Header.jsx";
+import {Banner} from "../components/Banner.jsx";
 const Home = () => {
     return (
-        <Header></Header>
+        <div>
+            <Header></Header>
+            <Banner></Banner>
+        </div>
     );
 };
 

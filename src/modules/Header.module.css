@@ -35,5 +35,12 @@
 .header-wrapper nav ul li .active {
   color: #000000;
 }
+.header-wrapper .icons-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 6.5px;
+}
 
 /*# sourceMappingURL=Header.module.css.map */

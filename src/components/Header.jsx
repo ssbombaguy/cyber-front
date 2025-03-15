@@ -9,18 +9,21 @@ import search from '../assets/search-icon.svg'
 import {Link} from "react-router";
 
 export const Header = () => {
-    const [menus, setMenus] = useState({});
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:5000/menus/navbarItems')
             .then(function (response) {
-                console.log(response.data);
+
+                setData(response.data);
+                console.log(response.data)
+                console.log(data)
             })
             .catch(function (error) {
                 console.log(error);
             })
     }, []);
+
 
     return (
         <>
@@ -34,20 +37,24 @@ export const Header = () => {
                 </figure>
                 <nav>
                     <ul>
-                        <li>
-                            <Link className={`${classes['navlink']} ${classes['active']}`} to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link className={classes['navlink']} to="/">About</Link>
-                        </li>
-                        <li>
-                            <Link className={classes['navlink']} to="/">Contact Us</Link>
-                        </li>
-                        <li>
-                            <Link className={classes['navlink']} to="/">Blog</Link>
-                        </li>
+                        {data.length > 0 ? (
+                            data.map((item,index) => (
+                                <li key={index}>
+                                    <Link className={`${classes['navlink']} ${classes['active']}`} to={item.slug}>
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))
+                        ) : (
+                            <li>Loading...</li>
+                        )}
                     </ul>
                 </nav>
+                <figure className={classes['icons-wrapper']}>
+                    <img src={favorites} alt="favorites-icon"/>
+                    <img src={profile} alt="profile-icon"/>
+                    <img src={cart} alt="cart-icon"/>
+                </figure>
             </header>
         </>
     )

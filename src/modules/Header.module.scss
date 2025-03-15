@@ -41,4 +41,11 @@
       }
     }
   }
+  .icons-wrapper {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    padding: 6.5px;
+  }
 }
