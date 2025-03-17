@@ -74,6 +74,9 @@
         background: gray;
       }
     }
+    .mobile-menu{
+      display: none;
+    }
   }
 }
 @media (max-width: 375px) {
@@ -106,18 +109,26 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .bar{
-        display: none;
+      padding: 24px 16px;
+      .burger-btn{
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: none;
       }
-  }
-
-
-  }
-  .icons-wrapper{
-    display: none;
-    img{
+    }
+    .mobile-menu{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .icons-wrapper{
       display: none;
     }
-  }
 
+  }
 }

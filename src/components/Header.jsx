@@ -6,13 +6,17 @@ import favorites from '../assets/favorites-icon.svg'
 import profile from '../assets/profile-icon.svg'
 import logo from '../assets/cyber-logo.svg'
 import search from '../assets/search-icon.svg'
-import burger from '../assets/Vector.svg'
+import burger from '../assets/Burger.svg'
 import {Link} from "react-router";
 
 
 export const Header = () => {
     const [data, setData] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
+    const clickHandler = () => {
+        setIsOpen(true);
+        console.log(isOpen)
+    }
     useEffect(() => {
         axios.get('http://localhost:5000/menus/navbarItems')
             .then(function (response) {
@@ -53,42 +57,31 @@ export const Header = () => {
                             )}
                         </ul>
                     </div>
-                    <div className={classes["menu-toggle"]}>
-                        <button className={`${classes["bar-btn"]} ${isOpen ? classes["btn-clicked"] : ""}`}
-                                onClick={() => setIsOpen(!isOpen)}>
-                            <img src={burger} alt="burger-icon"/>
-                            <img src={burger} alt="burger-icon"/>
-                            <img src={burger} alt="burger-icon"/>
-                        </button>
-                        <div className={`${classes["bar"]} ${isOpen ? classes["open"] : ""}`}>
-                            <ul>
-                                {data.length > 0 ? (
-                                    data.map((item, index) => (
-                                        <li key={index}>
-                                            <Link className={`${classes['navlink']} ${classes['active']}`}
-                                                  to={item.slug}>
-                                                {item.name}
-                                            </Link>
-                                        </li>
-                                    ))
-                                ) : (
-                                    <li>Loading...</li>
-                                )}
-                            </ul>
-                            <figure className={classes['toggle-icons-wrapper']}>
-                                <img src={favorites} alt="favorites-icon"/>
-                                <img src={profile} alt="profile-icon"/>
-                                <img src={cart} alt="cart-icon"/>
-                            </figure>
-                        </div>
-
-                    </div>
                 </nav>
                 <figure className={classes['icons-wrapper']}>
                     <img src={favorites} alt="favorites-icon"/>
                     <img src={profile} alt="profile-icon"/>
                     <img src={cart} alt="cart-icon"/>
                 </figure>
+                <div className={classes["menu-toggle"]}>
+                    <button className={classes["burger-btn"]} onClick={clickHandler}><img src={burger} alt="cyber-logo"/>
+                    </button>
+                </div>
+                {isOpen && <div className={`${isOpen} ? ${classes["mobile-menu-active"]}: ${classes["mobile-menu"]}`}>
+                    <ul>
+                        {data.length > 0 ? (
+                            data.map((item, index) => (
+                                <li key={index}>
+                                    <Link className={`${classes['navlink']} ${classes['active']}`} to={item.slug}>
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))
+                        ) : (
+                            <li>Loading...</li>
+                        )}
+                    </ul>
+                </div>}
             </header>
         </>
     )
