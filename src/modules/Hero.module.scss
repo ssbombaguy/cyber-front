@@ -1,0 +1,212 @@
+.banner-wrapper{
+  font-family: Inter, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 160px;
+  padding-left: 160px;
+  background: linear-gradient(90.7deg, #211C24 0.64%, #211C24 101%);
+  margin-top: 16px;
+  @media (max-width: 375px) {
+    display: flex;
+    padding-top: 88px;
+    padding-right: 16px;
+    padding-left: 16px;
+    gap: 48px;
+    flex-direction: column
+  }
+  .banner-context{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    @media (max-width: 375px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 343px;
+      gap: 16px;
+    }
+    h3{
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 32px;
+      letter-spacing: 0;
+      color: #FFFFFF;
+      opacity: 0.4;
+      margin: 24px;
+      @media (max-width: 375px) {
+        width: 343px;
+        height: 32px;
+        opacity: 0.4;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 32px;
+        letter-spacing: 0;
+        text-align: center;
+      }
+    }
+    h1{
+      font-weight: 100;
+      font-size: 96px;
+      line-height: 72px;
+      letter-spacing: -1%;
+      color:#FFFFFF;
+      width: 714px;
+      height: 72px;
+      margin-bottom: 24px;
+      @media (max-width: 375px) {
+        width: 343px;
+        height: 144px;
+        font-weight: 100;
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -1%;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      span{
+        font-weight: 600;
+        font-size: 96px;
+        line-height: 72px;
+        letter-spacing: -1%;
+        color:#FFFFFF;
+        @media (max-width: 375px) {
+          font-weight: 600;
+          font-size: 72px;
+          line-height: 72px;
+          letter-spacing: -1%;
+          text-align: center;
+          color: #FFFFFF;
+        }
+      }
+    }
+    p{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #909090;
+      @media (max-width: 375px) {
+        width: 343px;
+        height: 48px;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 24px;
+        letter-spacing: 0;
+        text-align: center;
+        color: #909090;
+        margin-inline: 16px;
+      }
+    }
+    .shop-btn{
+      width: 191px;
+      height: 56px;
+      padding: 16px 56px;
+      gap: 8px;
+      border-radius: 6px;
+      border: 1px solid #FFFFFF;
+      background: transparent;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0;
+      text-align: center;
+      color: #FFFFFF;
+      &:hover{
+        background: #FFFFFF;
+        color: #211C24;
+        transform: scale(1.1);
+      }
+      @media (max-width: 375px) {
+        width: 191px;
+        height: 56px;
+        padding: 16px 56px;
+        gap: 8px;
+        border-radius: 6px;
+        border: 1px solid #FFFFFF;
+      }
+
+    }
+  }
+  figure{
+    @media (max-width: 375px) {
+      padding: 11px;
+    }
+    img{
+      width: 406px;
+      height: 632px;
+      @media (max-width: 375px) {
+        width: 343px;
+        height: 632px;
+      }
+    }
+  }
+}
+.hero-gadgets{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  .column-gadgets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .playstation{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 720px;
+      height: 328px;
+      background: #FFFFFF;
+      margin-left: 0;
+      figure img{
+        width: 344px;
+        height: 328px;
+        margin-left: 0;
+        padding-left:0 ;
+      }
+      .playstation-context{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        width: 338px;
+        height: 128px;
+        max-width: 404px;
+
+        h2{
+          font-weight: 500;
+          font-size: 49px;
+          line-height: 40px;
+          letter-spacing: 0;
+          width: 338px;
+          height: 40px;
+          color: #000000;
+        }
+        p{
+          width: 338px;
+          height: 72px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0;
+          color: #909090;
+        }
+      }
+    }
+    .rower{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

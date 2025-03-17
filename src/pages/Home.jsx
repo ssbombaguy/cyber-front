@@ -1,12 +1,12 @@
 
 import '../reset.scss'
 import {Header} from "../components/Header.jsx";
-import {Banner} from "../components/Banner.jsx";
+import {Hero} from "../components/Hero.jsx";
 const Home = () => {
     return (
         <div>
             <Header></Header>
-            <Banner></Banner>
+            <Hero></Hero>
         </div>
     );
 };
