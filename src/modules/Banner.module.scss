@@ -49,7 +49,7 @@
 
 
     }
-    button{
+    .shop-btn{
       width: 191px;
       height: 56px;
       padding: 16px 56px;
@@ -63,7 +63,11 @@
       letter-spacing: 0;
       text-align: center;
       color: #FFFFFF;
-
+      &:hover{
+        background: #FFFFFF;
+        color: #211C24;
+        transform: scale(1.1);
+      }
 
     }
   }
@@ -71,8 +75,83 @@
     img{
       width: 406px;
       height: 632px;
-
     }
-
+  }
+}
+@media (max-width: 375px) {
+  .banner-wrapper{
+    display: flex;
+    padding-top: 88px;
+    padding-right: 16px;
+    padding-left: 16px;
+    gap: 48px;
+    flex-direction: column;
+    .banner-context{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 343px;
+      gap: 16px;
+      h3{
+          width: 343px;
+          height: 32px;
+          opacity: 0.4;
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 32px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+      h1{
+        width: 343px;
+        height: 144px;
+        font-weight: 100;
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -1%;
+        text-align: center;
+        color: #FFFFFF;
+        span{
+          font-weight: 600;
+          font-size: 72px;
+          line-height: 72px;
+          letter-spacing: -1%;
+          text-align: center;
+          color: #FFFFFF;
+        }
+      }
+      p{
+        width: 343px;
+        height: 48px;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 24px;
+        letter-spacing: 0;
+        text-align: center;
+        color: #909090;
+        margin-inline: 16px;
+      }
+      .shop-btn{
+        width: 191px;
+        height: 56px;
+        padding: 16px 56px;
+        gap: 8px;
+        border-radius: 6px;
+        border: 1px solid #FFFFFF;
+        &:hover{
+          background: #FFFFFF;
+          color: #211C24;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  figure{
+    padding: 11px;
+    img{
+      width: 343px;
+      height: 632px;
+    }
   }
 }

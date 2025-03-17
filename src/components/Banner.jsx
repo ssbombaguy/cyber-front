@@ -10,7 +10,7 @@ export const Banner = () => {
                     <p>Created to change everything for the better.For everyone</p>
                 </div>
                 <div>
-                    <button className={classes["shot-btn"]}>Shop Now</button>
+                    <button className={classes["shop-btn"]}>Shop Now</button>
                 </div>
             </div>
             <figure>
