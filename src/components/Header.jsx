@@ -6,7 +6,7 @@ import favorites from '../assets/favorites-icon.svg'
 import profile from '../assets/profile-icon.svg'
 import logo from '../assets/cyber-logo.svg'
 import search from '../assets/search-icon.svg'
-import burger from '../assets/Burger.svg'
+import burger from '../assets/burger.svg'
 import {Link} from "react-router";
 
 

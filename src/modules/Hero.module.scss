@@ -146,67 +146,201 @@
     }
   }
 }
-.hero-gadgets{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  .column-gadgets{
+.hero-gadgets {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .playstation{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      width: 720px;
-      height: 328px;
-      background: #FFFFFF;
-      margin-left: 0;
-      figure img{
-        width: 344px;
-        height: 328px;
-        margin-left: 0;
-        padding-left:0 ;
-      }
-      .playstation-context{
+    justify-content: space-between;
+    height: 600px;
+    .grid-container{
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+      padding-top: 10px;
+      height: 600px;
+      .playstation{
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 16px;
-        width: 338px;
-        height: 128px;
-        max-width: 404px;
-
-        h2{
-          font-weight: 500;
-          font-size: 49px;
-          line-height: 40px;
-          letter-spacing: 0;
-          width: 338px;
-          height: 40px;
-          color: #000000;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF;
+        width: 720px;
+        height: 328px;
+        figure img{
+          position: relative;
+          left: 0;
         }
-        p{
-          width: 338px;
-          height: 72px;
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 24px;
-          letter-spacing: 0;
-          color: #909090;
+        .playstation-context{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin:100px 48px 100px 0 ;
+            gap: 16px;
+            h1{
+              font-weight: 500;
+              font-size: 49px;
+              line-height: 40px;
+              letter-spacing: 0;
+              color: #000000;
+            }
+            p{
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 24px;
+              width: 338px;
+              height: 72px;
+              color: #909090;
+            }
+
+        }
+      }
+      .flex-container{
+        display: flex;
+        flex-direction: row;
+        height: 272px;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        .airpods{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 360px;
+          height: 272px;
+          gap: 26px;
+          background: #EDEDED;
+          figure img{
+            width: 104px;
+            height: 272px;
+          }
+          .airpods-context{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 16px;
+            h1{
+              font-weight: 300;
+              font-size: 29px;
+              line-height: 40px;
+              letter-spacing: 0;
+              color: #000000;
+            }
+            span{
+              font-weight: 500;
+              font-size: 29px;
+              line-height: 40px;
+              letter-spacing: 0;
+              color: #000000;
+            }
+            p{
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 24px;
+              width: 160px;
+              height: 48px;
+              color: #909090;
+            }
+          }
+        }
+        .apple-vision{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          background: #353535;
+          width: 360px;
+          height: 272px;
+          figure img{
+              width: 136px;
+              height: 190px;
+          }
+          .apple-vision-context{
+            width: 160px;
+            height: 144px;
+            max-width: 176px;
+            gap: 8px;
+            padding-top: 64px ;
+            padding-bottom: 64px;
+            h1{
+              font-weight: 300;
+              font-size: 29px;
+              line-height: 40px;
+              letter-spacing: 0;
+              color: #FFFFFF;
+              span{
+                font-weight: 500;
+                font-size: 29px;
+                line-height: 40px;
+                letter-spacing: 0;
+                color: #FFFFFF;
+              }
+            }
+            p{
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 24px;
+              letter-spacing: 0;
+              color: #909090;
+            }
+          }
+
         }
       }
     }
-    .rower{
+  .macbook{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: #EDEDED;
+    width: 720px;
+    height: 600px;
+    padding: 0 0 44px 56px;
+    .macbook-context{
       display: flex;
-      flex-direction: row;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       justify-content: center;
+      gap: 16px;
+      h1{
+        font-weight: 100;
+        font-size: 64px;
+        line-height: 56px;
+        letter-spacing: 0;
+        color: #000000;
+      }
+      span{
+        display: block;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 56px;
+        color: #000000;
+      }
+      p{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: #909090;
+        width: 360px;
+        height: 72px;
+      }
+      .shop-btn{
+        width: 191px;
+        height: 56px;
+        padding: 16px 56px;
+        gap: 8px;
+        border-radius: 6px;
+        border: 1px solid #000000;
+        background: transparent;
+        &:hover{
+          background: transparent;
+          color: #000000;
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }
